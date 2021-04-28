@@ -27,72 +27,37 @@ Runs quickly and takes only a short time to classify a new image.
 Can fit in a small amount of memory, so that it can run in a small processor that the city will attach to many different security cameras.
 Note: Having three evaluation metrics makes it harder for you to quickly choose between two different algorithms, and will slow down the speed with which your team can iterate. True/False?
 
-1 point
 
-True
+ANS: True
 
 
-False
-
-2.
-Question 2
-After further discussions, the city narrows down its criteria to: 
+Question 2: After further discussions, the city narrows down its criteria to: 
 
 "We need an algorithm that can let us know a bird is flying over Peacetopia as accurately as possible."
 "We want the trained model to take no more than 10sec to classify a new image.” 
 “We want the model to fit in 10MB of memory.” 
 If you had the three following models, which one would you choose?
 
-1 point
 
-Test Accuracy	Runtime	Memory size
-97%	3 sec	2MB
-
-Test Accuracy	Runtime	Memory size
-97%	1 sec	3MB
-
-Test Accuracy	Runtime	Memory size
-99%	13 sec	9MB
-
+ANS:
 Test Accuracy	Runtime	Memory size
 98%	9 sec	9MB
-3.
+
 Question 3
 Based on the city’s requests, which of the following would you say is true? 
 
-1 point
+ANS: Accuracy is an optimizing metric; running time and memory size are a satisficing metrics.
 
-Accuracy, running time and memory size are all optimizing metrics because you want to do well on all three.
-
-
-Accuracy, running time and memory size are all satisficing metrics because you have to do sufficiently well on all three for your system to be acceptable. 
-
-
-Accuracy is an optimizing metric; running time and memory size are a satisficing metrics.
-
-
-Accuracy is a satisficing metric; running time and memory size are an optimizing metric.
-
-4.
 Question 4
 Structuring your data
 
 Before implementing your algorithm, you need to split your data into train/dev/test sets. Which of these do you think is the best choice?
 
-1 point
-
-Train	Dev	Test
-6,000,000	1,000,000	3,000,000
-
-Train	Dev	Test
-6,000,000	3,000,000	1,000,000
+ANS:
 
 Train	Dev	Test
 9,500,000	250,000	250,000
 
-Train	Dev	Test
-3,333,334	3,333,333	3,333,333
-5.
 Question 5
 After setting up your train/dev/test sets, the City Council comes across another 1,000,000 images, called the “citizens’ data”. Apparently the citizens of Peacetopia are so scared of birds that they volunteered to take pictures of the sky and label them, thus contributing these additional 1,000,000 images. These images are different from the distribution of images the City Council had originally given you, but you think it could help your algorithm. 
 
@@ -102,29 +67,17 @@ Is the following statement true or false?
 
 "You should not add the citizens' data to the training set, because if the training distribution is different from the dev and test sets, then this will not allow the model to perform well on the test set."
 
-1 point
+ANS: False
 
-True
-
-
-False
-
-6.
 Question 6
 One member of the City Council knows a little about machine learning, and thinks you should add the 1,000,000 citizens’ data images to the test set. You object because:
 
-1 point
+ANS:
 
-This would cause the dev and test set distributions to become different. This is a bad idea because you’re not aiming where you want to hit.
+* This would cause the dev and test set distributions to become different. This is a bad idea because you’re not aiming where you want to hit.
 
+* The test set no longer reflects the distribution of data (security cameras) you most care about.
 
-The test set no longer reflects the distribution of data (security cameras) you most care about.
-
-
-A bigger test set will slow down the speed of iterating because of the computational expense of evaluating models on the test set.
-
-
-The 1,000,000 citizens’ data images do not have a consistent x-->y mapping as the rest of the data (similar to the New York City/Detroit housing prices example from lecture).
 
 7.
 Question 7
