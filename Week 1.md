@@ -30,15 +30,15 @@ Note: Having three evaluation metrics makes it harder for you to quickly choose 
 **ANS:** True
 
 
-**Question 2: After further discussions, the city narrows down its criteria to:**
+**Question 2: After further discussions, the city narrows down its criteria to:
 
 "We need an algorithm that can let us know a bird is flying over Peacetopia as accurately as possible."
 "We want the trained model to take no more than 10sec to classify a new image.” 
 “We want the model to fit in 10MB of memory.” 
-If you had the three following models, which one would you choose?
+If you had the three following models, which one would you choose?**
 
 
-**ANS:**
+**ANS:**\
 Test Accuracy	| Runtime |	Memory size \
 98%	| 9 sec	| 9MB
 
@@ -50,8 +50,8 @@ Test Accuracy	| Runtime |	Memory size \
 
 Before implementing your algorithm, you need to split your data into train/dev/test sets. Which of these do you think is the best choice?
 
-**ANS:**
-Train |	Dev |	Test
+**ANS:**\
+Train |	Dev |	Test \
 9,500,000 |	250,000 |	250,000
 
 **Question 5:
