@@ -27,7 +27,7 @@ Can fit in a small amount of memory, so that it can run in a small processor tha
 Note: Having three evaluation metrics makes it harder for you to quickly choose between two different algorithms, and will slow down the speed with which your team can iterate. True/False?
 
 
-**ANS:** True
+**ANS:** - True
 
 
 **Question 2: After further discussions, the city narrows down its criteria to: **
