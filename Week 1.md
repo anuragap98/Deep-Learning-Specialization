@@ -27,10 +27,10 @@ Can fit in a small amount of memory, so that it can run in a small processor tha
 Note: Having three evaluation metrics makes it harder for you to quickly choose between two different algorithms, and will slow down the speed with which your team can iterate. True/False?
 
 
-**ANS:** - True
+**ANS:** True
 
 
-**Question 2: After further discussions, the city narrows down its criteria to: **
+**Question 2: After further discussions, the city narrows down its criteria to:**
 
 "We need an algorithm that can let us know a bird is flying over Peacetopia as accurately as possible."
 "We want the trained model to take no more than 10sec to classify a new image.” 
@@ -55,7 +55,7 @@ Train |	Dev |	Test
 9,500,000 |	250,000 |	250,000
 
 **Question 5:
-After setting up your train/dev/test sets, the City Council comes across another 1,000,000 images, called the “citizens’ data”. Apparently the citizens of Peacetopia are so scared of birds that they volunteered to take pictures of the sky and label them, thus contributing these additional 1,000,000 images. These images are different from the distribution of images the City Council had originally given you, but you think it could help your algorithm. **
+After setting up your train/dev/test sets, the City Council comes across another 1,000,000 images, called the “citizens’ data”. Apparently the citizens of Peacetopia are so scared of birds that they volunteered to take pictures of the sky and label them, thus contributing these additional 1,000,000 images. These images are different from the distribution of images the City Council had originally given you, but you think it could help your algorithm.**
 
 Notice that adding this additional data to the training set will make the distribution of the training set different from the distributions of the dev and test sets.
 
@@ -140,7 +140,7 @@ You have only 1,000 images of the new species of bird. The city expects a better
 **ANS:**
 Use the data you have to define a new evaluation metric (using a new dev/test set) taking into account the new species, and use that to drive further progress for your team. 
 
-**Question 15: The City Council thinks that having more Cats in the city would help scare off birds. They are so happy with your work on the Bird detector that they also hire you to build a Cat detector. (Wow Cat detectors are just incredibly useful aren’t they.) Because of years of working on Cat detectors, you have such a huge dataset of 100,000,000 cat images that training on this data takes about two weeks. Which of the statements do you agree with? (Check all that agree.) **
+**Question 15: The City Council thinks that having more Cats in the city would help scare off birds. They are so happy with your work on the Bird detector that they also hire you to build a Cat detector. (Wow Cat detectors are just incredibly useful aren’t they.) Because of years of working on Cat detectors, you have such a huge dataset of 100,000,000 cat images that training on this data takes about two weeks. Which of the statements do you agree with? (Check all that agree.)**
 
 **ANS:**
 * Buying faster computers could speed up your teams’ iteration speed and thus your team’s productivity. 
