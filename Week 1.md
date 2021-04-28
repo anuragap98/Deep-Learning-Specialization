@@ -39,7 +39,7 @@ If you had the three following models, which one would you choose?
 
 
 **ANS:**
-Test Accuracy	| Runtime |	Memory size
+Test Accuracy	| Runtime |	Memory size \
 98%	| 9 sec	| 9MB
 
 **Question 3: Based on the city’s requests, which of the following would you say is true?**
