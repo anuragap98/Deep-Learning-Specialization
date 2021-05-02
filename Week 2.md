@@ -8,9 +8,9 @@ Your 100,000 labeled images are taken using the front-facing camera of your car.
 
 You are just getting started on this project. What is the first thing you do? Assume each of the steps below would take about an equal amount of time (a few days).
 
-    - Spend a few days training a basic model and see what mistakes it makes.
+   - [x] Spend a few days training a basic model and see what mistakes it makes.
     
-    > As discussed in lecture, applied ML is a highly iterative process. If you train a basic model and carry out error analysis (see what mistakes it makes) it will help point you in more promising directions.
+   > As discussed in lecture, applied ML is a highly iterative process. If you train a basic model and carry out error analysis (see what mistakes it makes) it will help point you in more promising directions.
     
 2. Your goal is to detect road signs (stop sign, pedestrian crossing sign, construction ahead sign) and traffic signals (red and green lights) in images. The goal is to recognize which of these objects appear in each image. You plan to use a deep neural network with ReLU units in the hidden layers.
 
@@ -94,12 +94,13 @@ You are just getting started on this project. What is the first thing you do? As
     > You will probably not improve performance by more than 2.2% by solving the raindrops problem. If your dataset was infinitely big, 2.2% would be a perfect estimate of the improvement you can achieve by purchasing a specially designed windshield wiper that removes the raindrops.
     
 10. You decide to use data augmentation to address foggy images. You find 1,000 pictures of fog off the internet, and “add” them to clean images to synthesize foggy days, like this:
+![image](https://user-images.githubusercontent.com/38902075/116812280-9e436780-ab6b-11eb-84d2-5891a930859d.png)
 
-    Which of the following statements do you agree with? (Check all that apply.)
+   Which of the following statements do you agree with? (Check all that apply.)
     
-    - So long as the synthesized fog looks realistic to the human eye, you can be confident that the synthesized data is accurately capturing the distribution of real foggy images, since human vision is very accurate for the problem you’re solving.
+   - So long as the synthesized fog looks realistic to the human eye, you can be confident that the synthesized data is accurately capturing the distribution of real foggy images, since human vision is very accurate for the problem you’re solving.
     
-    > If the synthesized images look realistic, then the model will just see them as if you had added useful data to identify road signs and traffic signals in a foggy weather. I will very likely help.
+   > If the synthesized images look realistic, then the model will just see them as if you had added useful data to identify road signs and traffic signals in a foggy weather. I will very likely help.
     
 11. After working further on the problem, you’ve decided to correct the incorrectly labeled data on the dev set. Which of these statements do you agree with? (Check all that apply).
 
