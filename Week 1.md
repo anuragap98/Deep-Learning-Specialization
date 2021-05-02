@@ -1,34 +1,36 @@
 ## Week 1 Quiz - Bird recognition in the city of Peacetopia (case study)
 
 1. Problem Statement
-This example is adapted from a real production application, but with details disguised to protect confidentiality.
-You are a famous researcher in the City of Peacetopia. The people of Peacetopia have a common characteristic: they are afraid of birds. To save them, you have to build an algorithm that will detect any bird flying over Peacetopia and alert the population.
+  This example is adapted from a real production application, but with details disguised to protect confidentiality.
+  You are a famous researcher in the City of Peacetopia. The people of Peacetopia have a common characteristic: they are afraid of birds. To save them, you have to build a 
+  algorithm that will detect any bird flying over Peacetopia and alert the population.
 
-The City Council gives you a dataset of 10,000,000 images of the sky above Peacetopia, taken from the city’s security cameras. They are labelled:
-y = 0: There is no bird on the image
-y = 1: There is a bird on the image
-Your goal is to build an algorithm able to classify new images taken by security cameras from Peacetopia.
+  The City Council gives you a dataset of 10,000,000 images of the sky above Peacetopia, taken from the city’s security cameras. They are labelled:
+  y = 0: There is no bird on the image
+  y = 1: There is a bird on the image
+  Your goal is to build an algorithm able to classify new images taken by security cameras from Peacetopia.
 
-There are a lot of decisions to make:
+  There are a lot of decisions to make:
 
-What is the evaluation metric?
-How do you structure your data into train/dev/test sets?
-Metric of success
+  What is the evaluation metric?
+  How do you structure your data into train/dev/test sets?
+  Metric of success
 
-The City Council tells you that they want an algorithm that
-Has high accuracy
-Runs quickly and takes only a short time to classify a new image. 
-Can fit in a small amount of memory, so that it can run in a small processor that the city will attach to many different security cameras.
-Note: Having three evaluation metrics makes it harder for you to quickly choose between two different algorithms, and will slow down the speed with which your team can iterate. True/False?
+  The City Council tells you that they want an algorithm that
+  Has high accuracy
+  Runs quickly and takes only a short time to classify a new image. 
+  Can fit in a small amount of memory, so that it can run in a small processor that the city will attach to many different security cameras.
+  Note: Having three evaluation metrics makes it harder for you to quickly choose between two different algorithms, and will slow down the speed with which your team can
+  iterate. True/False?
 
   - [x] True
 
 
 2. After further discussions, the city narrows down its criteria to:
-"We need an algorithm that can let us know a bird is flying over Peacetopia as accurately as possible."
-"We want the trained model to take no more than 10sec to classify a new image.” 
-“We want the model to fit in 10MB of memory.” 
-If you had the three following models, which one would you choose?
+  "We need an algorithm that can let us know a bird is flying over Peacetopia as accurately as possible."
+  "We want the trained model to take no more than 10sec to classify a new image.” 
+  “We want the model to fit in 10MB of memory.” 
+  If you had the three following models, which one would you choose?
 
  - [x] Test Accuracy	|  Runtime  |	 Memory size \
            98%	      |  9 sec	  |    9MB
@@ -38,17 +40,18 @@ If you had the three following models, which one would you choose?
  - [x] Accuracy is an optimizing metric; running time and memory size are a satisficing metrics.
 
 4. Structuring your data
-Before implementing your algorithm, you need to split your data into train/dev/test sets. Which of these do you think is the best choice?
+  Before implementing your algorithm, you need to split your data into train/dev/test sets. Which of these do you think is the best choice?
 
  - [x]  Train   |	  Dev   |	  Test \
       9,500,000 |	250,000 |	 250,000
 
 5. After setting up your train/dev/test sets, the City Council comes across another 1,000,000 images, called the “citizens’ data”. Apparently the citizens of Peacetopia are so scared of birds that they volunteered to take pictures of the sky and label them, thus contributing these additional 1,000,000 images. These images are different from the distribution of images the City Council had originally given you, but you think it could help your algorithm.
 
-Notice that adding this additional data to the training set will make the distribution of the training set different from the distributions of the dev and test sets.
+  Notice that adding this additional data to the training set will make the distribution of the training set different from the distributions of the dev and test sets.
 
-Is the following statement true or false?
-"You should not add the citizens' data to the training set, because if the training distribution is different from the dev and test sets, then this will not allow the model to perform well on the test set."
+  Is the following statement true or false?
+  "You should not add the citizens' data to the training set, because if the training distribution is different from the dev and test sets, then this will not allow the model to 
+  perform well on the test set."
 
  - [x] False
 
@@ -61,7 +64,7 @@ Is the following statement true or false?
 7. You train a system, and its errors are as follows (error = 100%-Accuracy):
  - Training set error	4.0%
  - Dev set error	4.5%
-This suggests that one good avenue for improving performance is to train a bigger network so as to drive down the 4.0% training error. Do you agree?
+  This suggests that one good avenue for improving performance is to train a bigger network so as to drive down the 4.0% training error. Do you agree?
 
  - [x] No, because there is insufficient information to tell.
 
@@ -71,7 +74,7 @@ This suggests that one good avenue for improving performance is to train a bigge
  - Bird watching expert #2	0.5% error
  - Normal person #1 (not a bird watching expert)	1.0% error
  - Normal person #2 (not a bird watching expert)	1.2% error
-If your goal is to have “human-level performance” be a proxy (or estimate) for Bayes error, how would you define “human-level performance”?
+  If your goal is to have “human-level performance” be a proxy (or estimate) for Bayes error, how would you define “human-level performance”?
 
  - [x] 0.3% (accuracy of expert #1)
 
@@ -84,7 +87,7 @@ If your goal is to have “human-level performance” be a proxy (or estimate) f
  - Human-level performance	0.1%
  - Training set error	2.0%
  - Dev set error	2.1%
-Based on the evidence you have, which two of the following four options seem the most promising to try? (Check two options.)
+  Based on the evidence you have, which two of the following four options seem the most promising to try? (Check two options.)
 
  - [x] Try decreasing regularization.
  - [x] Train a bigger model to try to do better on the training set.
@@ -95,7 +98,7 @@ Based on the evidence you have, which two of the following four options seem the
  - Training set error	2.0%
  - Dev set error 	2.1%
  - Test set error	7.0%
-What does this mean? (Check the two best options.)
+  What does this mean? (Check the two best options.)
 
  - [x] You have overfit to the dev set. 
  - [x] You should try to get a bigger dev set.
@@ -106,7 +109,7 @@ What does this mean? (Check the two best options.)
  - Human-level performance	0.10%
  - Training set error	0.05%
  - Dev set error	0.05%
-What can you conclude? (Check all that apply.)
+  What can you conclude? (Check all that apply.)
 
  - [x] If the test set is big enough for the 0.05% error estimate to be accurate, this implies Bayes error is \leq 0.05%≤0.05 
  - [x] It is now harder to measure avoidable bias, thus progress will be slower going forward.
@@ -117,7 +120,7 @@ What can you conclude? (Check all that apply.)
 
 14. You’ve handily beaten your competitor, and your system is now deployed in Peacetopia and is protecting the citizens from birds! But over the last few months, a new species of bird has been slowly migrating into the area, so the performance of your system slowly degrades because your data is being tested on a new type of data.
 
-You have only 1,000 images of the new species of bird. The city expects a better system from you within the next 3 months. Which of these should you do first?
+  You have only 1,000 images of the new species of bird. The city expects a better system from you within the next 3 months. Which of these should you do first?
 
  - [x] Use the data you have to define a new evaluation metric (using a new dev/test set) taking into account the new species, and use that to drive further progress for your team.
 
